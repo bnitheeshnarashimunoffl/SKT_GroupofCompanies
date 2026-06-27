@@ -1,0 +1,101 @@
+/**
+ * Image System
+ * 
+ * Per 02-styling-and-layout.md:
+ * - Aspect-ratio containers prevent layout shift
+ * - Lazy loading for offscreen images
+ * - Object-fit: cover for consistent cropping
+ */
+
+/* Base Image Wrapper */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--c-bg-alt);
+}
+
+/* Aspect Ratio Variants */
+.img-wrapper.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.img-wrapper.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.img-wrapper.aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.img-wrapper.aspect-3-4 {
+  aspect-ratio: 3 / 4;
+}
+
+.img-wrapper.aspect-2-3 {
+  aspect-ratio: 2 / 3;
+}
+
+/* Image Element */
+.img-wrapper img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.img-wrapper img.loaded {
+  opacity: 1;
+}
+
+/* Placeholder Skeleton */
+.img-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--c-bg-alt) 0%,
+    var(--c-border) 50%,
+    var(--c-bg-alt) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive Container */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lazy Load Blur */
+.img-wrapper.lazy img:not(.loaded) {
+  filter: blur(10px);
+}
+
+.img-wrapper.lazy img.loaded {
+  filter: blur(0);
+}
+
+/* Hover Zoom Effect */
+.img-zoom {
+  transition: transform var(--transition-slow);
+}
+
+.img-wrapper:hover .img-zoom {
+  transform: scale(1.05);
+}

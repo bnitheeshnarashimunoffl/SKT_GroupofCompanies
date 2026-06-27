@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- 
+    SKT Translines — Sitemap
+    Generated: May 18, 2026
+    Update frequency: Monthly (branch info, team updates)
+  -->
+  
+  <url>
+    <loc>https://skttranslines.com/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://skttranslines.com/assets/hero-bg.png</image:loc>
+      <image:title>SKT Hero Background</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://skttranslines.com/assets/logo.png</image:loc>
+      <image:title>SKT Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- 
+    Note: This is a single-page application (SPA).
+    All sections are accessible via anchor links:
+    - #home (Hero)
+    - #about (About)
+    - #team (Team)
+    - #services (Services)
+    - #clients (Clients)
+    - #milestones (Milestones)
+    - #branches (Branches)
+    - #contact (Contact)
+    
+    For multi-page SEO, consider creating dedicated pages for:
+    - /services/road-transportation
+    - /services/warehousing
+    - /services/cf-agency
+    - /branches/[city-name]
+  -->
+</urlset>

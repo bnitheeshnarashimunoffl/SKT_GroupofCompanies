@@ -1,0 +1,27 @@
+{
+  "name": "SKT Translines — Sree Keerthi Group",
+  "short_name": "SKT",
+  "description": "India's logistics powerhouse since 2014 — transportation, warehousing, and C&F agency across 27 branches.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eaeaef",
+  "theme_color": "#eaeaef",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "logistics", "transportation"],
+  "lang": "en-IN",
+  "dir": "ltr"
+}

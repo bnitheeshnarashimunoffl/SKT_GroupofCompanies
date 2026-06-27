@@ -1,0 +1,86 @@
+/**
+ * Design Tokens — SKT Translines
+ * 
+ * Neumorphic design system variables.
+ * All colors, shadows, typography, spacing defined here.
+ * 
+ * Per 02-styling-and-layout.md:
+ * - CSS variables only (no SCSS/LESS)
+ * - No Tailwind classes
+ * - gap-not-margin law for layout spacing
+ */
+
+:root {
+  /* ── Colors ───────────────────────────────────────────────────────── */
+  --c-bg: #eaeaef;
+  --c-bg-alt: #f0f0f5;
+  --c-text: #1a1a1a;
+  --c-text-muted: #666;
+  --c-accent: #96352c;
+  --c-accent-hover: #7a2b24;
+  --c-white: #ffffff;
+  --c-border: #d0d0d5;
+
+  /* ── Typography ───────────────────────────────────────────────────── */
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Satoshi', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
+
+  /* ── Spacing ──────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Shadows (Neumorphic) ────────────────────────────────────────── */
+  --neu-raised: 
+    8px 8px 16px rgba(166, 166, 171, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.6);
+  --neu-pressed: 
+    inset 8px 8px 16px rgba(166, 166, 171, 0.4),
+    inset -8px -8px 16px rgba(255, 255, 255, 0.6);
+  --neu-flat: 
+    4px 4px 8px rgba(166, 166, 171, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.5);
+
+  /* ── Transitions ──────────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* ── Border Radius ────────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ── Container ────────────────────────────────────────────────────── */
+  --container-max: 1400px;
+  --container-padding: 2rem;
+}
+
+/* Dark mode support (optional - can be expanded later) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode tokens can be defined here if needed */
+  }
+}

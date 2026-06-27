@@ -1,0 +1,120 @@
+/**
+ * Clients Section Styles
+ * 
+ * Logo grid with hover effects
+ */
+
+.clients {
+  padding: var(--space-20) var(--container-padding);
+  background: var(--c-bg);
+}
+
+.clients-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.clients-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.clients-heading {
+  font-size: clamp(var(--font-size-4xl), 5vw, var(--font-size-6xl));
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.clients-heading span {
+  display: block;
+}
+
+.clients-heading .accent {
+  color: var(--c-accent);
+}
+
+/* Clients Grid */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.client-card {
+  position: relative;
+  padding: var(--space-8);
+  background: var(--c-bg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--neu-raised);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.client-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-hover));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    14px 14px 28px rgba(166, 166, 171, 0.4),
+    -14px -14px 28px rgba(255, 255, 255, 0.7);
+}
+
+.client-card:hover::before {
+  opacity: 1;
+}
+
+.client-card-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transition: color var(--transition-base);
+}
+
+.client-name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: var(--space-2);
+  transition: color var(--transition-base);
+}
+
+.client-card:hover .client-name {
+  color: var(--c-white);
+}
+
+.client-category {
+  font-size: var(--font-size-sm);
+  color: var(--c-text-muted);
+  transition: color var(--transition-base);
+}
+
+.client-card:hover .client-category {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .clients {
+    padding: var(--space-12) var(--container-padding);
+  }
+  
+  .clients-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

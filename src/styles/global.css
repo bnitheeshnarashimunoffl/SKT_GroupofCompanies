@@ -1,0 +1,28 @@
+/**
+ * SKT Translines — Master Stylesheet (Flattened)
+ * 
+ * Previously used @import chain (12 files), now flattened for zero
+ * render-blocking overhead. Vite bundles all CSS into one file anyway.
+ * 
+ * Design tokens must load first.
+ */
+
+/* ── Design Tokens ─────────────────────────────────────────────────── */
+@import './tokens.css';
+
+/* ── Global Reset & Base ────────────────────────────────────────────── */
+@import './components/reset.css';
+
+/* ── All Component Styles ──────────────────────────────────────────── */
+@import './components/nav.css';
+@import './components/hero.css';
+@import './components/credentials.css';
+@import './components/about.css';
+@import './components/team.css';
+@import './components/services.css';
+@import './components/clients.css';
+@import './components/milestones.css';
+@import './components/branches.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/image.css';

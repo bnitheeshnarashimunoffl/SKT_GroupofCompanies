@@ -1,0 +1,135 @@
+/**
+ * Footer Styles
+ * 
+ * Simple footer with navigation links and background text
+ */
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-12) var(--container-padding);
+  background: var(--c-bg);
+  border-top: 2px solid var(--c-border);
+}
+
+.footer-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(80px, 15vw, 300px);
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--c-text);
+  opacity: 0.03;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--c-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--c-accent);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+
+.footer-copyright {
+  font-size: var(--font-size-sm);
+  color: var(--c-text-muted);
+}
+
+/* Designer Link Rollover Effect */
+.footer-designer {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  height: 1.2em;
+  line-height: 1.2em;
+  overflow: hidden;
+}
+
+.footer-designer-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: var(--c-accent);
+  transition: color var(--transition-fast);
+}
+
+.designer-text-default,
+.designer-text-hover {
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.designer-text-hover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  color: var(--c-text);
+}
+
+.footer-designer-link:hover .designer-text-default {
+  transform: translateY(-100%);
+}
+
+.footer-designer-link:hover .designer-text-hover {
+  transform: translateY(-100%);
+  color: var(--c-accent);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: var(--space-6);
+    text-align: center;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-info {
+    align-items: center;
+  }
+
+  .designer-text-hover {
+    text-align: center;
+  }
+}

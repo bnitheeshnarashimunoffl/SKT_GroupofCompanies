@@ -1,0 +1,168 @@
+/**
+ * About Section Styles
+ * 
+ * Two-column layout with image and growth metrics
+ */
+
+.about {
+  padding: var(--space-20) var(--container-padding);
+  background: var(--c-bg-alt);
+}
+
+.about-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.about-heading {
+  font-size: clamp(var(--font-size-4xl), 5vw, var(--font-size-6xl));
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.about-heading span {
+  display: block;
+}
+
+.about-heading .accent {
+  color: var(--c-accent);
+}
+
+/* Two-Column Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--neu-raised);
+  aspect-ratio: 4 / 3;
+}
+
+.about-image-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-4);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: var(--c-white);
+  font-size: var(--font-size-sm);
+}
+
+.about-image-location {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.about-image-tag {
+  opacity: 0.8;
+}
+
+/* Growth Tag */
+.about-growth-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: var(--c-accent);
+  color: var(--c-white);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-6);
+  box-shadow: var(--neu-raised);
+}
+
+.about-growth-value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+}
+
+/* Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-paragraph {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--c-text);
+}
+
+.about-paragraph:first-letter {
+  font-weight: 600;
+  color: var(--c-accent);
+}
+
+/* Metrics */
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-top: var(--space-8);
+  border-top: 2px solid var(--c-border);
+}
+
+.about-metric {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--c-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--neu-flat);
+}
+
+.about-metric-value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--c-accent);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.about-metric-label {
+  font-size: var(--font-size-xs);
+  color: var(--c-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .about-image-wrapper {
+    order: -1;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--space-12) var(--container-padding);
+  }
+  
+  .about-metrics {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

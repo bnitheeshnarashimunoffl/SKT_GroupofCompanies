@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ── Primary Meta Tags ──────────────────────────────────────────── -->
+    <title>SKT — Sree Keerthi Group | India's Logistics Powerhouse Since 2014</title>
+    <meta name="title" content="SKT — Sree Keerthi Group | India's Logistics Powerhouse Since 2014" />
+    <meta name="description" content="India's trusted logistics powerhouse since 2014 — transportation, warehousing, and C&F agency across 27 branches nationwide. ₹150 Crore FY25 turnover. Zero claims record." />
+    <meta name="keywords" content="logistics, transportation, warehousing, C&F agency, freight, supply chain, India, SKT, Sree Keerthi Group, trucking, shipping" />
+    <meta name="author" content="Sree Keerthi Group Services Pvt. Ltd." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://skttranslines.com" />
+
+    <!-- ── Theme Color ────────────────────────────────────────────────── -->
+    <meta name="theme-color" content="#eaeaef" />
+    <meta name="msapplication-TileColor" content="#96352c" />
+
+    <!-- ── Open Graph / Facebook ─────────────────────────────────────── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://skttranslines.com" />
+    <meta property="og:title" content="SKT — Sree Keerthi Group | India's Logistics Powerhouse" />
+    <meta property="og:description" content="From 2 branches to 27 nationwide — ₹150 Crore FY25 turnover with zero claims. Your trusted logistics partner since 2014." />
+    <meta property="og:image" content="https://skttranslines.com/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SKT Translines — India's Logistics Powerhouse" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="SKT Translines" />
+
+    <!-- ── Twitter Card ──────────────────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://skttranslines.com" />
+    <meta name="twitter:title" content="SKT — Sree Keerthi Group | India's Logistics Powerhouse" />
+    <meta name="twitter:description" content="From 2 branches to 27 nationwide — ₹150 Crore FY25 turnover with zero claims. Your trusted logistics partner since 2014." />
+    <meta name="twitter:image" content="https://skttranslines.com/assets/og-image.jpg" />
+    <meta name="twitter:image:alt" content="SKT Translines — India's Logistics Powerhouse" />
+
+    <!-- ── Favicon ───────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ── Preconnect & DNS Prefetch ─────────────────────────────────── -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.fontshare.com" />
+
+    <!-- ── Font Loading (Fontshare — Clash Display + Satoshi) ────────── -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" />
+    </noscript>
+
+    <!-- ── LCP Image Preload ─────────────────────────────────────────── -->
+    <link rel="preload" as="image" href="/assets/hero-bg.webp" fetchpriority="high" />
+
+    <!-- ── Critical CSS (Inline) ──────────────────────────────────────── -->
+    <style>
+      /* 
+       * LCP STRATEGY: Hero image renders IMMEDIATELY at z-index:10.
+       * The splash is just a text badge at z-index:20 — transparent,
+       * so the image is always visible and becomes the LCP candidate
+       * as soon as its bytes arrive (~1s on 3G for 196KB WebP).
+       */
+
+      *,:after,:before{box-sizing:border-box;margin:0;padding:0}
+
+      html{overflow-x:clip}
+      body{overflow-x:clip;font-family:'Satoshi',sans-serif;background:#eaeaef;color:#1a1a1a}
+
+      /* Hero image — visible from byte 1, no JS or CSS file needed */
+      #hero-lcp{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:10}
+      #hero-veil{position:fixed;inset:0;background:linear-gradient(to bottom,rgba(234,234,239,.82),rgba(234,234,239,.78) 40%,rgba(234,234,239,.85) 70%,rgba(234,234,239,.95));z-index:11}
+
+      /* Splash: transparent text badge, NOT a full-screen block */
+      #splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:20;pointer-events:none;background:transparent;transition:opacity .3s ease}
+      #splash.hidden{opacity:0}
+      .splash-badge{font-family:'Clash Display',sans-serif;font-size:1.5rem;font-weight:700;color:#96352c;letter-spacing:.05em;background:rgba(234,234,239,.85);padding:.5rem 1.5rem;border-radius:8px}
+
+      /* React content sits above the veil */
+      #root{position:relative;z-index:15;min-height:100vh;opacity:0;transition:opacity .3s ease}
+      #root.ready{opacity:1}
+
+      /* 5-second failsafe */
+    </style>
+
+    <!-- ── Splash Failsafe ────────────────────────────────────────────── -->
+    <script>
+      setTimeout(function(){
+        var s=document.getElementById('splash');
+        if(s){s.style.opacity='0';s.classList.add('hidden')}
+      },5000)
+    </script>
+
+    <!-- ── Structured Data (JSON-LD) ─────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sree Keerthi Group Services Pvt. Ltd.",
+      "alternateName": "SKT Translines",
+      "url": "https://skttranslines.com",
+      "logo": "https://skttranslines.com/assets/logo.png",
+      "description": "India's trusted logistics powerhouse since 2014 — transportation, warehousing, and C&F agency across 27 branches nationwide.",
+      "foundingDate": "2014",
+      "founders": [{"@type":"Person","name":"Mr. V. Devaraj","jobTitle":"Chairman & Managing Director"}],
+      "address":{"@type":"PostalAddress","streetAddress":"K.K.V. Towers, I Floor, No. 3, Chokkanathar Street, Karthikeyan Nagar, Maduravoyal","addressLocality":"Chennai","addressRegion":"Tamil Nadu","postalCode":"600 095","addressCountry":"IN"},
+      "contactPoint":{"@type":"ContactPoint","telephone":"+91-9849494588","contactType":"customer service","email":"sktdevaraj@gmail.com","areaServed":"IN","availableLanguage":["English","Hindi","Tamil","Telugu"]},
+      "sameAs":["https://www.linkedin.com/company/skt-translines","https://twitter.com/skttranslines"],
+      "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"156","bestRating":"5","worstRating":"1"}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"LocalBusiness",
+      "name":"SKT Translines — Chennai Corporate Office",
+      "image":"https://skttranslines.com/assets/corporate-team.webp",
+      "@id":"https://skttranslines.com#corporate-office",
+      "url":"https://skttranslines.com",
+      "telephone":"+91-9849494588","email":"sktdevaraj@gmail.com",
+      "address":{"@type":"PostalAddress","streetAddress":"K.K.V. Towers, I Floor, No. 3, Chokkanathar Street, Karthikeyan Nagar, Maduravoyal","addressLocality":"Chennai","addressRegion":"TN","postalCode":"600 095","addressCountry":"IN","geo":{"@type":"GeoCoordinates","latitude":"13.0475","longitude":"80.1588"}},
+      "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:00"},
+      "priceRange":"₹₹","areaServed":{"@type":"Country","name":"India"}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"Service",
+      "serviceType":"Logistics and Transportation",
+      "provider":{"@type":"Organization","name":"SKT Translines"},
+      "areaServed":{"@type":"Country","name":"India"},
+      "hasOfferCatalog":{"@type":"OfferCatalog","name":"Logistics Services","itemListElement":[
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Road Transportation","description":"Contract-rate operations with prompt truck placement and live tracking"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Warehousing","description":"Strategically located modern warehousing facilities for safe storage"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"C&F Agency","description":"Growing C&F practice expanding into new industries and territories"}}
+      ]}
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- 
+      LCP ELEMENT — Hero image renders at z-index:10, above veil (11).
+      Splash is just a transparent text badge at z-index:20.
+      Image is ALWAYS visible — LCP fires as soon as bytes arrive (~1s).
+    -->
+    <img id="hero-lcp" src="/assets/hero-bg.webp" alt="" width="1920" height="1080" fetchpriority="high" />
+    <div id="hero-veil"></div>
+
+    <!-- Splash: transparent badge, NOT covering the hero image -->
+    <div id="splash" role="status" aria-label="Loading SKT Translines">
+      <div class="splash-badge">SKT</div>
+    </div>
+
+    <!-- React App Mount Point -->
+    <div id="root" role="application" aria-label="SKT Translines Application"></div>
+
+    <!-- Vite Entry -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

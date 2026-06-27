@@ -1,0 +1,243 @@
+/**
+ * Hero Section Styles
+ * 
+ * Full-viewport hero with background image, centered content,
+ * eyebrow badge, heading, subtext, CTA buttons, and marquee strip.
+ * One unified structure — responsive via CSS breakpoints.
+ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-24) var(--container-padding);
+  padding-top: calc(var(--space-24) + 80px); /* Account for fixed nav */
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ── Background ───────────────────────────────────────────────────── */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* ── Content ──────────────────────────────────────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Eyebrow Badge ────────────────────────────────────────────────── */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-6);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(150, 53, 44, 0.1);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--c-text-muted);
+  margin-bottom: var(--space-8);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero-eyebrow-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--c-accent);
+  flex-shrink: 0;
+}
+
+/* ── Heading ──────────────────────────────────────────────────────── */
+.hero-heading {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 1.05;
+  margin-bottom: var(--space-8);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero-heading span {
+  display: block;
+}
+
+.hero-heading .accent {
+  color: var(--c-accent);
+  font-style: italic;
+}
+
+/* ── Subtext ──────────────────────────────────────────────────────── */
+.hero-subtext {
+  max-width: 620px;
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--c-text-muted);
+  margin-bottom: var(--space-10);
+}
+
+/* ── CTA Buttons ──────────────────────────────────────────────────── */
+.hero-cta-group {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  background: var(--c-accent);
+  color: var(--c-white);
+  box-shadow: 0 4px 14px rgba(150, 53, 44, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--c-accent-hover);
+  color: var(--c-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(150, 53, 44, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--c-text);
+  border: 1.5px solid var(--c-border);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+  transform: translateY(-2px);
+}
+
+/* ── Marquee Clients ──────────────────────────────────────────────── */
+.hero-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: var(--space-4) 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(234, 234, 239, 0.5);
+  margin-top: auto;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.hero-marquee-track {
+  display: flex;
+  gap: var(--space-12);
+  animation: marquee 10s linear infinite;
+}
+
+.hero-marquee-item {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+/* Dot separator between marquee items */
+.hero-marquee-item + .hero-marquee-item::before {
+  content: '•';
+  margin-right: var(--space-12);
+  color: var(--c-accent);
+  opacity: 0.5;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Tablet ───────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+  }
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--space-16) + 60px);
+  }
+
+  .hero-heading {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  /* On mobile: stack CTAs vertically, show primary as full-width "Get a Quote" */
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hide the outline "Our Services" button on mobile */
+  .btn-outline {
+    display: none;
+  }
+
+  .hero-marquee-track {
+    gap: var(--space-8);
+  }
+
+  .hero-marquee-item + .hero-marquee-item::before {
+    margin-right: var(--space-8);
+  }
+}
