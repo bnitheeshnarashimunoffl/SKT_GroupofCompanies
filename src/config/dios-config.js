@@ -113,20 +113,8 @@ export const siteConfig = {
         ]
       },
       {
-        id: "n-sudhakar",
-        number: "02",
-        name: "Mr. N. Sudhakar",
-        designation: "Chief Executive",
-        experience: "25+",
-        photo: "/assets/sudhakar.webp",
-        bio: [
-          "Possessing around 27 years of experience in the transportation industry, Mr. Sudhakar has been a key person in discharging duties alongside Mr. V. Devaraj in AST, and even after the floating of SKT, he continues to perform a key role in managing the day-to-day activities of the erstwhile AST Company.",
-          "His dynamic approach and practical wisdom has brought bumper profits during the last decade. Being an adept in carrying out inspections, he was instrumental in plugging loop-holes that allowed leakages of revenue. He introduced an internal control system, strengthened the inspection and internal audit departments, and established a system of close monitoring of the movement of funds and vehicles."
-        ]
-      },
-      {
         id: "r-balaji",
-        number: "03",
+        number: "02",
         name: "Mr. R. Balaji",
         designation: "Director",
         experience: "30+",
@@ -138,7 +126,7 @@ export const siteConfig = {
       },
       {
         id: "kv-shiva-rao",
-        number: "04",
+        number: "03",
         name: "Mr. K.V. Shiva Rao",
         designation: "Core Management",
         experience: "40+",
@@ -148,7 +136,19 @@ export const siteConfig = {
           "The phenomenal growth the company has registered within a few years of its formation can be attributed to Mr. K.V. Shiva Rao, who has built and managed a comprehensive clientele of consequence to boost the profitability of the company. He is also enriched with three decades of experience at AST.",
           "The financial needs and working capital structuring that are sine qua non for the success of this logistics enterprise were made possible through the efficient service rendered by Mr. K.V. Shiva Rao, who was instrumental in carving a niche for the company in the field of transportation."
         ]
-      }
+      },
+      {
+        id: "n-sudhakar",
+        number: "04",
+        name: "Mr. N. Sudhakar",
+        designation: "Chief Executive",
+        experience: "25+",
+        photo: "/assets/sudhakar.webp",
+        bio: [
+          "Possessing around 27 years of experience in the transportation industry, Mr. Sudhakar has been a key person in discharging duties alongside Mr. V. Devaraj in AST, and even after the floating of SKT, he continues to perform a key role in managing the day-to-day activities of the erstwhile AST Company.",
+          "His dynamic approach and practical wisdom has brought bumper profits during the last decade. Being an adept in carrying out inspections, he was instrumental in plugging loop-holes that allowed leakages of revenue. He introduced an internal control system, strengthened the inspection and internal audit departments, and established a system of close monitoring of the movement of funds and vehicles."
+        ]
+      },
     ]
   },
 
@@ -490,7 +490,7 @@ export const siteConfig = {
       "together."
     ],
     description: "Ready to streamline your logistics? Get in touch with our team.",
-    email: "balaji@sktransport.co.in",
+    email: "sktmadras@gmail.com",
     phone: "+91 98494 94588",
     address: "KKV Towers, Maduravoyal, Chennai – 600 095"
   },
@@ -506,3 +506,4 @@ export const siteConfig = {
     ]
   }
 };
+
