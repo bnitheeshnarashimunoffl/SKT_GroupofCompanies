@@ -62,7 +62,7 @@
 
 .client-card:hover {
   transform: translateY(-6px);
-  box-shadow: 
+  box-shadow:
     14px 14px 28px rgba(166, 166, 171, 0.4),
     -14px -14px 28px rgba(255, 255, 255, 0.7);
 }
@@ -84,7 +84,7 @@
   font-weight: 700;
   color: var(--c-text);
   margin-bottom: var(--space-2);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   transition: color var(--transition-base);
 }
 
@@ -113,7 +113,7 @@
   .clients {
     padding: var(--space-12) var(--container-padding);
   }
-  
+
   .clients-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
