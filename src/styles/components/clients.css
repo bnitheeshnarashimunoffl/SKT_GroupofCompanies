@@ -84,6 +84,7 @@
   font-weight: 700;
   color: var(--c-text);
   margin-bottom: var(--space-2);
+  letter-spacing: 1px;
   transition: color var(--transition-base);
 }
 

@@ -182,12 +182,12 @@ export const siteConfig = {
     featured: [
       {
         tag: "★ Featured Partnership",
-        title: "Dedicated C&F for Adani Wilmar — since Nov 2019.",
-        description: "Adani Wilmar Ltd. awarded SKT its C&F agency out of Tirupati in November 2019 which is now operating from Kadapa. Five-plus years later, the partnership runs ahead of expectation — a testament to operational reliability that compounds over time."
+        title: "Dedicated C & F for Adani Wilmar — since Nov 2019.",
+        description: "Adani Wilmar Ltd. awarded SKT its C & F agency out of Tirupati in November 2019 which is now operating from Kadapa. Five-plus years later, the partnership runs ahead of expectation — a testament to operational reliability that compounds over time."
       },
       {
         tag: "★ Featured Partnership",
-        title: "Dedicated C&F for Gemini Edibles and Fats.",
+        title: "Dedicated C & F for Gemini Edibles and Fats.",
         description: "Carried out by SKT in Hyderabad."
       }
     ]
